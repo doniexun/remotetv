@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.myth.dao.TvInfoMapper">
+  <resultMap id="BaseResultMap" type="com.myth.pojo.TvInfo">
+    <id column="TV_CODE" jdbcType="INTEGER" property="tvCode" />
+    <result column="TV_CREATE_TIME" jdbcType="CHAR" property="tvCreateTime" />
+    <result column="TV_APP_LIST" jdbcType="VARCHAR" property="tvAppList" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    TV_CODE, TV_CREATE_TIME, TV_APP_LIST
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from tv_list
+    where TV_CODE = #{tvCode,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from tv_list
+    where TV_CODE = #{tvCode,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.myth.pojo.TvInfo">
+    insert into tv_list (TV_CODE, TV_CREATE_TIME, TV_APP_LIST
+      )
+    values (#{tvCode,jdbcType=INTEGER}, #{tvCreateTime,jdbcType=CHAR}, #{tvAppList,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.myth.pojo.TvInfo">
+    insert into tv_list
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="tvCode != null">
+        TV_CODE,
+      </if>
+      <if test="tvCreateTime != null">
+        TV_CREATE_TIME,
+      </if>
+      <if test="tvAppList != null">
+        TV_APP_LIST,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="tvCode != null">
+        #{tvCode,jdbcType=INTEGER},
+      </if>
+      <if test="tvCreateTime != null">
+        #{tvCreateTime,jdbcType=CHAR},
+      </if>
+      <if test="tvAppList != null">
+        #{tvAppList,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.myth.pojo.TvInfo">
+    update tv_list
+    <set>
+      <if test="tvCreateTime != null">
+        TV_CREATE_TIME = #{tvCreateTime,jdbcType=CHAR},
+      </if>
+      <if test="tvAppList != null">
+        TV_APP_LIST = #{tvAppList,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where TV_CODE = #{tvCode,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.myth.pojo.TvInfo">
+    update tv_list
+    set TV_CREATE_TIME = #{tvCreateTime,jdbcType=CHAR},
+      TV_APP_LIST = #{tvAppList,jdbcType=VARCHAR}
+    where TV_CODE = #{tvCode,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.myth.pojo.TvInfo">
+    <id column="tv_code" jdbcType="INTEGER" property="tvCode" />
+    <result column="tv_create_time" jdbcType="CHAR" property="tvCreateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    tv_code, tv_create_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from tv_list
+    where tv_code = #{tvCode,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from tv_list
+    where tv_code = #{tvCode,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.myth.pojo.TvInfo">
+    insert into tv_list (tv_code, tv_create_time)
+    values (#{tvCode,jdbcType=INTEGER}, #{tvCreateTime,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.myth.pojo.TvInfo">
+    insert into tv_list
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="tvCode != null">
+        tv_code,
+      </if>
+      <if test="tvCreateTime != null">
+        tv_create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="tvCode != null">
+        #{tvCode,jdbcType=INTEGER},
+      </if>
+      <if test="tvCreateTime != null">
+        #{tvCreateTime,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.myth.pojo.TvInfo">
+    update tv_list
+    <set>
+      <if test="tvCreateTime != null">
+        tv_create_time = #{tvCreateTime,jdbcType=CHAR},
+      </if>
+    </set>
+    where tv_code = #{tvCode,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.myth.pojo.TvInfo">
+    update tv_list
+    set tv_create_time = #{tvCreateTime,jdbcType=CHAR}
+    where tv_code = #{tvCode,jdbcType=INTEGER}
+  </update>
+</mapper>
