@@ -9,17 +9,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/resources/spring-mybatis.xml" line="32" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f595363-280e-42c0-aab9-cf7c9e432b41" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/myth/pojo/socket/MobileSocket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/myth/pojo/socket/TvSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myth/controller/MobileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myth/controller/MobileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myth/controller/TvController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myth/controller/TvController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myth/dao/mapping/TvInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myth/dao/mapping/TvInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myth/service/TvService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myth/service/TvService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/myth/service/impl/TvServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myth/service/impl/TvServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="7f595363-280e-42c0-aab9-cf7c9e432b41" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,8 +38,8 @@
       <file leaf-file-name="TvSocket.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/myth/pojo/socket/TvSocket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+            <state relative-caret-position="147">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -460,7 +450,7 @@
       <workItem from="1531190059966" duration="8673000" />
       <workItem from="1531205719763" duration="3835000" />
       <workItem from="1531211943312" duration="3405000" />
-      <workItem from="1531224697579" duration="3766000" />
+      <workItem from="1531224697579" duration="3945000" />
     </task>
     <task id="LOCAL-00001" summary="第二次">
       <created>1531207387517</created>
@@ -469,15 +459,21 @@
       <option name="project" value="LOCAL" />
       <updated>1531207387517</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="commit3">
+      <created>1531228598572</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1531228598572</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31259000" />
+    <option name="totallyTimeSpent" value="31438000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -499,8 +495,8 @@
       <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info anchor="bottom" id="Run" order="8" weight="0.33603895" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.32954547" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.24130106" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.3284553" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.24130106" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -521,7 +517,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="第二次" />
-    <option name="LAST_COMMIT_MESSAGE" value="第二次" />
+    <MESSAGE value="commit3" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit3" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/myth/pojo/TvInfo.java">
@@ -778,10 +775,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myth/pojo/MobileInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/myth/pojo/socket/TvSocket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+        <state relative-caret-position="147">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

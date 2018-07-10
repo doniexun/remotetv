@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.myth.dao.MobileInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.myth.pojo.MobileInfo" >
+    <id column="MOBILE_CODE" property="mobileCode" jdbcType="INTEGER" />
+    <result column="MOBILE_CREATE_TIME" property="mobileCreateTime" jdbcType="CHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    MOBILE_CODE, MOBILE_CREATE_TIME
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from mobile_list
+    where MOBILE_CODE = #{mobileCode,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from mobile_list
+    where MOBILE_CODE = #{mobileCode,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.myth.pojo.MobileInfo" >
+    insert into mobile_list (MOBILE_CODE, MOBILE_CREATE_TIME)
+    values (#{mobileCode,jdbcType=INTEGER}, #{mobileCreateTime,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.myth.pojo.MobileInfo" >
+    insert into mobile_list
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="mobileCode != null" >
+        MOBILE_CODE,
+      </if>
+      <if test="mobileCreateTime != null" >
+        MOBILE_CREATE_TIME,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="mobileCode != null" >
+        #{mobileCode,jdbcType=INTEGER},
+      </if>
+      <if test="mobileCreateTime != null" >
+        #{mobileCreateTime,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.myth.pojo.MobileInfo" >
+    update mobile_list
+    <set >
+      <if test="mobileCreateTime != null" >
+        MOBILE_CREATE_TIME = #{mobileCreateTime,jdbcType=CHAR},
+      </if>
+    </set>
+    where MOBILE_CODE = #{mobileCode,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.myth.pojo.MobileInfo" >
+    update mobile_list
+    set MOBILE_CREATE_TIME = #{mobileCreateTime,jdbcType=CHAR}
+    where MOBILE_CODE = #{mobileCode,jdbcType=INTEGER}
+  </update>
+</mapper>
