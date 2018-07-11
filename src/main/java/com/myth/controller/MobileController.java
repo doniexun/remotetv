@@ -21,6 +21,7 @@ public class MobileController {
     //以下为mobile端
     @RequestMapping(value = "/getConnection.html")
     public void getConnection(HttpServletRequest request, HttpServletResponse response) {
+        
     }
     @RequestMapping(value = "/getAppList.html")
     public void getAppList(HttpServletRequest request, HttpServletResponse response) {
