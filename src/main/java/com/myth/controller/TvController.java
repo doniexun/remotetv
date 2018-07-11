@@ -3,6 +3,7 @@ package com.myth.controller;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.myth.pojo.TvInfo;
+import com.myth.pojo.socket.TvSocket;
 import com.myth.service.impl.TvServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,5 +30,10 @@ public class TvController {
     }
     @RequestMapping(value = "/isBinding.html")
     public void isBinding(HttpServletRequest request, HttpServletResponse response) {
+    }
+
+    @RequestMapping(value = "/agreeBinding.html")
+    public void agreeBinding(HttpServletRequest request, HttpServletResponse response) {
+        TvSocket.connectInfo.add(request.getParameter("connectionInfo"));
     }
 }
