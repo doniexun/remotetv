@@ -1,9 +1,7 @@
 package com.myth.dao;
 
 import com.myth.pojo.MobileInfo;
-import org.springframework.stereotype.Repository;
 
-@Repository
 public interface MobileInfoMapper {
     int deleteByPrimaryKey(Integer mobileCode);
 
